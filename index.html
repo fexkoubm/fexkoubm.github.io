@@ -3,20 +3,20 @@ layout: default
 ---
 <style type="text/css">
   span{
-    font-size: 50px;
+    color: #ff0000;
   }
 </style>
 <div class="home">
 
   <ul class="post-list">
     {% for post in site.posts %}
-      <li>
+      <div>
         <span>{{ post.date | date: "%b %-d, %Y" }}</span>
 
         <span>
           <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </span>
-      </li>
+      </div>
     {% endfor %}
   </ul>
 </div>
